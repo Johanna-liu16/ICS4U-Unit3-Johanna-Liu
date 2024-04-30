@@ -1,3 +1,4 @@
+
 /*
  * This program uses oop
  *
@@ -14,7 +15,6 @@ final class Main {
     /**
      * Prevent instantiation.
      * Throw an exception IllegalStateException.
-     * if this ever is called
      *
      * @throws IllegalStateException
      *
@@ -22,24 +22,43 @@ final class Main {
     private Main() {
         throw new IllegalStateException("Cannot be instantiated");
     }
-    public static String reversedString(stringToReverse: string) {
+
+    /**
+     * Reverse the string.
+     *
+     * @param stringToReverse
+     *
+     * @return string
+     *
+     */
+    public static String reversedString(String stringToReverse) {
         String theString = stringToReverse;
         if (theString.length() > 0) {
             final char firstChar = theString.charAt(0);
             theString = theString.substring(1, theString.length());
-            theString = reverse_string(theString);
+            theString = reversedString(theString);
             theString += firstChar;
         }
-        return theString
+        return theString;
     }
-    public static void main(String[] args) {
-        public static final  aString = "recursion";
 
-        System.out.println("");
-        System.out.println("The original string is " + aString);
-        reversedString = reverseString(aString);
-        System.out.println("The reversed string is " + reversedString)
-        
-        System.out.println("\nDone.")
+    /**
+     * Get string.
+     *
+     * @param args
+     *
+     */
+    public static void main(String[] args) {
+        final String aString = "recursion";
+
+        final String original = "The original string is ";
+        final String finalString = "The reversed string is ";
+
+        System.out.println();
+        System.out.println(original + aString);
+        final String reverseString = reversedString(aString);
+        System.out.println(finalString + reverseString);
+
+        System.out.println("\nDone.");
     }
 }
