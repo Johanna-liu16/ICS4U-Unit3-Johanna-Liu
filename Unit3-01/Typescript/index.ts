@@ -19,10 +19,22 @@ function reverseString(stringToReverse: string): string {
 }
 
 const aString = "recusrsion"
+const bString = "typescript"
+const cString = "plants"
 
 console.log("")
 console.log(`The original string is ${aString}`)
 let reversedString = reverseString(aString)
 console.log(`The reversed string is ${reversedString}`)
+
+console.log("")
+console.log(`The original string is ${bString}`)
+let reversedStringB = reverseString(bString)
+console.log(`The reversed string is ${reversedStringB}`)
+
+console.log("")
+console.log(`The original string is ${cString}`)
+let reversedStringC = reverseString(cString)
+console.log(`The reversed string is ${reversedStringC}`)
 
 console.log(`\nDone.`)

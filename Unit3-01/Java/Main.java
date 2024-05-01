@@ -50,6 +50,8 @@ final class Main {
      */
     public static void main(String[] args) {
         final String aString = "recursion";
+        final String bString = "java";
+        final String cString = "plants";
 
         final String original = "The original string is ";
         final String finalString = "The reversed string is ";
@@ -58,6 +60,16 @@ final class Main {
         System.out.println(original + aString);
         final String reverseString = reversedString(aString);
         System.out.println(finalString + reverseString);
+
+        System.out.println();
+        System.out.println(original + bString);
+        final String reverseStringB = reversedString(bString);
+        System.out.println(finalString + reverseStringB);
+
+                System.out.println();
+        System.out.println(original + cString);
+        final String reverseStringC = reversedString(cString);
+        System.out.println(finalString + reverseStringC);
 
         System.out.println("\nDone.");
     }
