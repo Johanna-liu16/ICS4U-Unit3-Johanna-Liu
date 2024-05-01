@@ -16,7 +16,7 @@ final class Main {
      * Prevent instantiation.
      * Throw an exception IllegalStateException.
      *
-     * @throws IllegalStateException
+     * @throws IllegalStateException if this is ever called
      *
      */
     private Main() {
