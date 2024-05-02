@@ -21,19 +21,19 @@ function findFactorial(factorialAnswer: number): number {
 }
 
 const five = 5
-const two = 2
-const seven = 7
+const negativeFive = -5
+const zero = 0
 
 console.log("")
 let fiveFactorial = findFactorial(five)
 console.log(`5! = ${fiveFactorial}`)
 
 console.log("")
-let twoFactorial = findFactorial(two)
-console.log(`5! = ${twoFactorial}`)
+let negFiveFactorial = findFactorial(negativeFive)
+console.log(`-5! = ${negFiveFactorial}`)
 
 console.log("")
-let sevenFactorial = findFactorial(seven)
-console.log(`5! = ${sevenFactorial}`)
+let zeroFactorial = findFactorial(zero)
+console.log(`0! = ${zeroFactorial}`)
 
 console.log(`\nDone.`)

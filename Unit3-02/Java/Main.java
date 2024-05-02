@@ -51,8 +51,8 @@ final class Main {
      */
     public static void main(String[] args) {
         final int aNum = 5;
-        final int bNum = 2;
-        final int cNum = 7;
+        final int bNum = -5;
+        final int cNum = 0;
 
         System.out.println();
         final int factorialA = findFactorial(aNum);
@@ -60,11 +60,11 @@ final class Main {
 
         System.out.println();
         final int factorialB = findFactorial(bNum);
-        System.out.println("2! = " + factorialB);
+        System.out.println("-5! = " + factorialB);
 
         System.out.println();
         final int factorialC = findFactorial(cNum);
-        System.out.println("7! = " + factorialC);
+        System.out.println("0! = " + factorialC);
 
         System.out.println("\nDone.");
     }
