@@ -9,16 +9,16 @@
 
 import { createPrompt, createSelection } from 'bun-promptx'
 function binarySearch(userArray: number[], userNumber: number, lowIndex: number, highIndex: number) {
-    const middleIndex = Math.floor((lowIndex + highIndex) / 2)
+    const half = Math.floor((lowIndex + highIndex) / 2)
 
     if (lowIndex > highIndex) {
       return -1
-    } else if (userArray[middleIndex] == userNumber) {
-      return middleIndex
-    } else if (userArray[middleIndex] > userNumber) {
-      return binarySearch(userArray, userNumber, lowIndex, middleIndex - 1)
-    } else if (userArray[middleIndex] < userNumber) {
-      return binarySearch(userArray, userNumber, middleIndex + 1, highIndex)
+    } else if (userArray[half] == userNumber) {
+      return half
+    } else if (userArray[half] > userNumber) {
+      return binarySearch(userArray, userNumber, lowIndex, half - 1)
+    } else if (userArray[half] < userNumber) {
+      return binarySearch(userArray, userNumber, half + 1, highIndex)
     }
   }
 
@@ -47,7 +47,7 @@ const intInput : number = parseInt(userInput)
 
 if (intInput > max || intInput < min) {
     console.log("Invalid Input")
-} else {
+} else { 
     // call function binarySearch
     const result = binarySearch(sortedArray, intInput, 0, sortedArray.length - 1)
 
