@@ -18,18 +18,15 @@ final class TowerOfHanoi {
     }
 
 
-    static void hanoi(final int nOfDisks, final int startPeg,
-                            final int endPeg, final int otherPeg) {
+    static void hanoi(final int nDisks, final int startRod,
+                            final int endRod, final int otherRod) {
         // This function calculates where the disks should be placed in
-        final int pegNumber = 6;
-        if (nOfDisks == 1) {
-            System.out.println("Move disk 1 from peg " + startPeg + " to peg "
-                               + endPeg);
-            return
+        if (nDisks == 0) {
+            return;
         } else {
-            hanoi(nOfDisks-1, startPeg, otherPeg, endPeg);
-            System.out.println("Move disk " + nOfDisks + " from " + startPeg+ " to " + otherPeg);
-            hanoi(nOfDisks-1, otherPeg, endPeg, startPeg);
+            hanoi(nDisks-1, startRod, otherRod, endRod);
+            System.out.println("Move disk " + nDisks + " from " + startRod+ " to " + endRod);
+            hanoi(nDisks-1, otherRod, endRod, startRod);
         }
     }
 
