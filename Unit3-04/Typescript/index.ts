@@ -8,7 +8,6 @@
 */
 
 import { createPrompt, createSelection } from 'bun-promptx'
-import { hasOnlyExpressionInitializer } from 'typescript'
 
 function hanoi(nDisks: number, startRod: number, endRod: number, otherRod: number) {
     if (nDisks == 0) {
