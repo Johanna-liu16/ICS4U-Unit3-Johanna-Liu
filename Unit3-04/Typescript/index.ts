@@ -34,4 +34,4 @@ if (isNaN(nOfDisks) || nOfDisks < 1) {
     hanoi(nOfDisks, startPeg, endPeg, otherPeg)
 }
 
-console.log("\nDone.")
+console.log("\nDone.") m
