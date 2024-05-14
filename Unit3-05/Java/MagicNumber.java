@@ -50,13 +50,23 @@ final class MagicNumber {
             // only fill in spots that have not yet been filled in
             if (index < 8) {
                 genSquare2(square, index + 1);
-            } else if (isMagic(square) == true) {
+            } else if (isMagic(square)) {
                 // if all done and it is magic, then print it out
-                printMagicSquare(square);
-                numberOfMagicSquares++;
+                boolean duplicates = false;
+                for (int counter1 = 0; counter1 < square.length; counter1++) {
+                    for (int counter2 = counter1 + 1; counter2 < square.length; counter2++) {
+                        if (square[counter1] == square[counter2]) {
+                            duplicates = true;
+                            break;
+                        }
+                    }
+                }
+                if (!duplicates) {
+                    printMagicSquare(square);
+                }
             }
         }
-    }
+    } 
 
     public static boolean isMagic(final int[] preSquare) {
         // returns true or false for whether or not array is a magic square
@@ -74,15 +84,6 @@ final class MagicNumber {
                && col3 == MAGICNUM && diag1 == MAGICNUM && diag2 == MAGICNUM;
     }
 
-    public static void isRepeat(final int[] square) {
-        for (int counter = 0; counter < 9; counter ++) {
-            for (int counter2 = counter +1; counter2 < 9; counter2++) {
-                if (square[counter] == square[counter2]) {
-                    return false;
-                }
-            }
-        }
-    }
     public static void printMagicSquare(final int[] outputSquare) {
         // prints inputted array in a magic square format
         System.out.println("\n*****");
