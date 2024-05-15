@@ -67,6 +67,6 @@ final class Main {
             topHalf(intInput);
             bottomHalf(intInput, counter);
         }
-        System.out.print("\nDone.");
+        System.out.println("\nDone.");
     }
 }
