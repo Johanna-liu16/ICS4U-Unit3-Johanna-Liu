@@ -29,7 +29,7 @@ final class Main {
         String line = "";
         if (starNum > 1) {
             line = "*".repeat(starNum);
-            System.out.print(line);
+            System.out.print(line + "\n");
             topHalf(starNum - 1);
         } else if (starNum == 1) {
             line = "*";
@@ -41,11 +41,11 @@ final class Main {
         String line = "";
         if (counter == 1) {
             line = "*";
-            System.out.println(line);
+            System.out.println("\n" + line);
             bottomHalf(starNum, counter + 1);
         } else if (counter <= starNum) {
             line = "*".repeat(counter);
-            System.out.print(line);
+            System.out.print(line + "\n");
             bottomHalf(starNum, counter + 1);
         }
     }
